@@ -539,13 +539,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enablestart-networkmanager" title="Enable/Start NetworkManager" class="md-nav__link">
-    Enable/Start NetworkManager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#install-xscreensaver" title="Install xscreensaver" class="md-nav__link">
     Install xscreensaver
   </a>
@@ -555,6 +548,136 @@
           <li class="md-nav__item">
   <a href="#install-login-manager" title="Install login manager" class="md-nav__link">
     Install login manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-bspwm-sxhkd-compton-rofi-polybar" title="Install bspwm, sxhkd, compton, rofi, polybar" class="md-nav__link">
+    Install bspwm, sxhkd, compton, rofi, polybar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivate-xfwm4" title="Deactivate xfwm4" class="md-nav__link">
+    Deactivate xfwm4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-xfce-hotkeys" title="Remove XFCE hotkeys" class="md-nav__link">
+    Remove XFCE hotkeys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autostart-required-applications-in-xfce" title="Autostart required applications in XFCE" class="md-nav__link">
+    Autostart required applications in XFCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-bspwm" title="Add bspwm" class="md-nav__link">
+    Add bspwm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-compton" title="Add compton" class="md-nav__link">
+    Add compton
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-workspaces-to-10" title="Set Workspaces to 10" class="md-nav__link">
+    Set Workspaces to 10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfile-notes" title="Dotfile notes" class="md-nav__link">
+    Dotfile notes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bspwm-bspwmrc" title="bspwm | bspwmrc" class="md-nav__link">
+    bspwm | bspwmrc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sxhkd-sxhkdrc" title="sxhkd | sxhkdrc" class="md-nav__link">
+    sxhkd | sxhkdrc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compton-comptonconf" title="compton | compton.conf" class="md-nav__link">
+    compton | compton.conf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rofi-config" title="rofi | config" class="md-nav__link">
+    rofi | config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" title="Additional notes" class="md-nav__link">
+    Additional notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-config" title="Post Config" class="md-nav__link">
+    Post Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-network-manager" title="Enable network manager" class="md-nav__link">
+    Enable network manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-packages" title="Install packages" class="md-nav__link">
+    Install packages
   </a>
   
 </li>
@@ -601,17 +724,12 @@ sudo pacman -S xfce4 xfce4-goodies human-icon-theme
 </td></tr></table>
 
 <p>Start xfce with:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>startx
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;exec startxfce4&quot;</span> &gt;&gt; ~/.xinitrc
+startx
 </pre></div>
 </td></tr></table></p>
 <p>The <code>.xinitrc</code> should already be fine because I installed my dot-files.</p>
-<h3 id="enablestart-networkmanager">Enable/Start NetworkManager<a class="headerlink" href="#enablestart-networkmanager" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>systemctl <span class="nb">enable</span> NetworkManager.service
-systemctl start NetworkManager.service
-</pre></div>
-</td></tr></table>
-
 <h3 id="install-xscreensaver">Install xscreensaver<a class="headerlink" href="#install-xscreensaver" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -814,7 +932,8 @@ yay -S sddm-config-editor-git
 52
 53
 54
-55</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/create_playlists.sh &amp;&amp; \</span>
+55
+56</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/create_playlists.sh &amp;&amp; \</span>
 <span class="s">sudo /bin/sh /tmp/create_playlists.sh</span>
 <span class="s">#!/bin/sh</span>
 
@@ -824,62 +943,262 @@ yay -S sddm-config-editor-git
 <span class="s">echo &quot;&quot; &gt; \$path_playlist/day.m3u</span>
 <span class="s">for i in b1-1.mov b1-3.mov b2-1.mov b2-2.mov b3-2.mov b3-3.mov b4-1.mov b4-2.mov \</span>
 <span class="s">b5-1.mov b5-2.mov b6-1.mov b6-3.mov b7-1.mov b7-2.mov b8-2.mov b8-3.mov b9-1.mov \</span>
-<span class="s">b9-3.mov b10-1.mov b10-3.mov comp_CH_C002_C005_PSNK_v05_SDR_PS_FINAL_20180709_SDR_2K_HE</span>VC.mov <span class="se">\</span>
-comp_CH_C007_C004_PSNK_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_CH_C007_C011_PSNK_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov comp_GL_G010_C006_v08_6Mbps.mov <span class="se">\</span>
-comp_LA_A006_C004_v01_SDR_FINAL_PS_20180730_SDR_2K_HEVC.mov <span class="se">\</span>
-DB_D001_C001_2K_SDR_HEVC.mov DB_D001_C005_2K_SDR_HEVC.mov DB_D002_C003_2K_SDR_HEVC.mov <span class="se">\</span>
-DB_D008_C010_2K_SDR_HEVC.mov DB_D011_C009_2K_SDR_HEVC.mov DB_D011_C010_2K_SDR_HEVC.mov <span class="se">\</span>
-GL_G002_C002_2K_SDR_HEVC.mov GL_G004_C010_2K_SDR_HEVC.mov HK_B005_C011_2K_SDR_HEVC.mov <span class="se">\</span>
-HK_H004_C001_2K_SDR_HEVC.mov HK_H004_C008_2K_SDR_HEVC.mov HK_H004_C010_2K_SDR_HEVC.mov <span class="se">\</span>
-HK_H004_C013_2K_SDR_HEVC.mov LA_A005_C009_2K_SDR_HEVC.mov LA_A006_C008_2K_SDR_HEVC.mov <span class="se">\</span>
-LA_A008_C004_2K_SDR_HEVC.mov LA_A009_C009_2K_SDR_HEVC.mov <span class="se">\</span>
-comp_A001_C004_1207W5_v23_SDR_FINAL_20180706_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A009_C001_010181A_v09_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A083_C002_1130KZ_v04_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A103_C002_0205DG_v12_SDR_FINAL_20180706_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A105_C003_0212CT_FLARE_v10_SDR_PS_FINAL_20180711_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A108_C001_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A114_C001_0305OT_v10_SDR_FINAL_22062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT026_363A_103NC_E1027_KOREA_JAPAN_NIGHT_v17_SDR_FINAL_25062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT306_139NC_139J_3066_CALI_TO_VEGAS_v07_SDR_FINAL_22062018_SDR_4K_HEVC.mov <span class="se">\</span>
-comp_GMT308_139K_142NC_CARIBBEAN_DAY_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT312_162NC_139M_1041_AFRICA_NIGHT_v14_SDR_FINAL_20180706_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT329_113NC_396B_1105_CHINA_v04_SDR_FINAL_20180706_F900F2700_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT329_117NC_401C_1037_IRELAND_TO_ASIA_v48_SDR_PS_FINAL_20180725_F0F6300_SDR_2K_HEVC.mov<span class="p">;</span> <span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&quot;\$path_vid/\$i&quot;</span> &gt;&gt; <span class="se">\$</span>path_playlist/day.m3u
-<span class="k">done</span>
+<span class="s">b9-3.mov b10-1.mov b10-3.mov comp_CH_C002_C005_PSNK_v05_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_CH_C007_C004_PSNK_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_CH_C007_C011_PSNK_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov comp_GL_G010_C006_v08_6Mbps.mov \</span>
+<span class="s">comp_LA_A006_C004_v01_SDR_FINAL_PS_20180730_SDR_2K_HEVC.mov \</span>
+<span class="s">DB_D001_C001_2K_SDR_HEVC.mov DB_D001_C005_2K_SDR_HEVC.mov DB_D002_C003_2K_SDR_HEVC.mov \</span>
+<span class="s">DB_D008_C010_2K_SDR_HEVC.mov DB_D011_C009_2K_SDR_HEVC.mov DB_D011_C010_2K_SDR_HEVC.mov \</span>
+<span class="s">GL_G002_C002_2K_SDR_HEVC.mov GL_G004_C010_2K_SDR_HEVC.mov HK_B005_C011_2K_SDR_HEVC.mov \</span>
+<span class="s">HK_H004_C001_2K_SDR_HEVC.mov HK_H004_C008_2K_SDR_HEVC.mov HK_H004_C010_2K_SDR_HEVC.mov \</span>
+<span class="s">HK_H004_C013_2K_SDR_HEVC.mov LA_A005_C009_2K_SDR_HEVC.mov LA_A006_C008_2K_SDR_HEVC.mov \</span>
+<span class="s">LA_A008_C004_2K_SDR_HEVC.mov LA_A009_C009_2K_SDR_HEVC.mov \</span>
+<span class="s">comp_A001_C004_1207W5_v23_SDR_FINAL_20180706_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A009_C001_010181A_v09_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A083_C002_1130KZ_v04_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A103_C002_0205DG_v12_SDR_FINAL_20180706_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A105_C003_0212CT_FLARE_v10_SDR_PS_FINAL_20180711_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A108_C001_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A114_C001_0305OT_v10_SDR_FINAL_22062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT026_363A_103NC_E1027_KOREA_JAPAN_NIGHT_v17_SDR_FINAL_25062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT306_139NC_139J_3066_CALI_TO_VEGAS_v07_SDR_FINAL_22062018_SDR_4K_HEVC.mov \</span>
+<span class="s">comp_GMT308_139K_142NC_CARIBBEAN_DAY_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT312_162NC_139M_1041_AFRICA_NIGHT_v14_SDR_FINAL_20180706_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT329_113NC_396B_1105_CHINA_v04_SDR_FINAL_20180706_F900F2700_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT329_117NC_401C_1037_IRELAND_TO_ASIA_v48_SDR_PS_FINAL_20180725_F0F6300_SDR_2K_HEVC.mov; do</span>
+<span class="s">    echo &quot;\$path_vid/\$i&quot; &gt;&gt; \$path_playlist/day.m3u</span>
+<span class="s">done</span>
 
-<span class="nb">echo</span> <span class="s2">&quot;&quot;</span> &gt; <span class="se">\$</span>path_playlist/night.m3u
-<span class="k">for</span> i in b1-2.mov b1-4.mov b2-3.mov b2-4.mov b3-1.mov b4-2.mov b5-3.mov <span class="se">\</span>
-b6-2.mov b6-4.mov b7-3.mov b10-4.mov b9-2.mov b10-2.mov b8-1.mov <span class="se">\</span>
-LA_A011_C003_2K_SDR_HEVC.mov <span class="se">\</span>
-comp_A001_C004_1207W5_v23_SDR_FINAL_20180706_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A009_C001_010181A_v09_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A083_C002_1130KZ_v04_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A103_C002_0205DG_v12_SDR_FINAL_20180706_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A105_C003_0212CT_FLARE_v10_SDR_PS_FINAL_20180711_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A108_C001_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_A114_C001_0305OT_v10_SDR_FINAL_22062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT026_363A_103NC_E1027_KOREA_JAPAN_NIGHT_v17_SDR_FINAL_25062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT306_139NC_139J_3066_CALI_TO_VEGAS_v07_SDR_FINAL_22062018_SDR_4K_HEVC.mov <span class="se">\</span>
-comp_GMT308_139K_142NC_CARIBBEAN_DAY_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT312_162NC_139M_1041_AFRICA_NIGHT_v14_SDR_FINAL_20180706_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT329_113NC_396B_1105_CHINA_v04_SDR_FINAL_20180706_F900F2700_SDR_2K_HEVC.mov <span class="se">\</span>
-comp_GMT329_117NC_401C_1037_IRELAND_TO_ASIA_v48_SDR_PS_FINAL_20180725_F0F6300_SDR_2K_HEVC.mov<span class="p">;</span> <span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&quot;\$path_vid/\$i&quot;</span> &gt;&gt; <span class="se">\$</span>path_playlist/night.m3u
-<span class="k">done</span>
+<span class="s">echo &quot;&quot; &gt; \$path_playlist/night.m3u</span>
+<span class="s">for i in b1-2.mov b1-4.mov b2-3.mov b2-4.mov b3-1.mov b4-2.mov b5-3.mov \</span>
+<span class="s">b6-2.mov b6-4.mov b7-3.mov b10-4.mov b9-2.mov b10-2.mov b8-1.mov \</span>
+<span class="s">LA_A011_C003_2K_SDR_HEVC.mov \</span>
+<span class="s">comp_A001_C004_1207W5_v23_SDR_FINAL_20180706_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A009_C001_010181A_v09_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A083_C002_1130KZ_v04_SDR_PS_FINAL_20180725_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A103_C002_0205DG_v12_SDR_FINAL_20180706_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A105_C003_0212CT_FLARE_v10_SDR_PS_FINAL_20180711_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A108_C001_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_A114_C001_0305OT_v10_SDR_FINAL_22062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT026_363A_103NC_E1027_KOREA_JAPAN_NIGHT_v17_SDR_FINAL_25062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT306_139NC_139J_3066_CALI_TO_VEGAS_v07_SDR_FINAL_22062018_SDR_4K_HEVC.mov \</span>
+<span class="s">comp_GMT308_139K_142NC_CARIBBEAN_DAY_v09_SDR_FINAL_22062018_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT312_162NC_139M_1041_AFRICA_NIGHT_v14_SDR_FINAL_20180706_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT329_113NC_396B_1105_CHINA_v04_SDR_FINAL_20180706_F900F2700_SDR_2K_HEVC.mov \</span>
+<span class="s">comp_GMT329_117NC_401C_1037_IRELAND_TO_ASIA_v48_SDR_PS_FINAL_20180725_F0F6300_SDR_2K_HEVC.mov; do</span>
+<span class="s">    echo &quot;\$path_vid/\$i&quot; &gt;&gt; \$path_playlist/night.m3u</span>
+<span class="s">done</span>
+<span class="s">EOF</span>
 </pre></div>
 </td></tr></table></p>
+<p>Enable SDDM service, delete xfce from the <code>.xinitrc</code> and reboot:<br />
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>systemctl <span class="nb">enable</span> sddm.service
+sed -i <span class="s1">&#39;$d&#39;</span> ~/.xinitrc
+reboot
+</pre></div>
+</td></tr></table></p>
+<h3 id="install-bspwm-sxhkd-compton-rofi-polybar">Install bspwm, sxhkd, compton, rofi, polybar<a class="headerlink" href="#install-bspwm-sxhkd-compton-rofi-polybar" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo pacman -S bspwm sxhkd compton rofi
+yay -S polybar
+</pre></div>
+</td></tr></table>
+
+<h3 id="deactivate-xfwm4">Deactivate xfwm4<a class="headerlink" href="#deactivate-xfwm4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Open 'Session and Startup' in XFCE settings manager and go to the 'Session' tab</li>
+<li>Select xfwm4, click 'Immediately' and change it to the 'Never' option</li>
+<li>Click the button: 'Save Session'</li>
+</ul>
+<h3 id="remove-xfce-hotkeys">Remove XFCE hotkeys<a class="headerlink" href="#remove-xfce-hotkeys" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Open 'Keyboard', and click the 'Application Shortcuts' tab</li>
+<li>Remove <strong>ALL</strong> keyboard shortcuts - if you don't do this, sxhkd won't work</li>
+</ul>
+<h3 id="autostart-required-applications-in-xfce">Autostart required applications in XFCE<a class="headerlink" href="#autostart-required-applications-in-xfce" title="Permanent link">&para;</a></h3>
+<p>I'm pretty sure there is a more efficient / elegant way to initiate these applications by editing xprofile or some such but since I'm a n00b and lazy, leveraging XFCE to autostart these applications is the easiest / most convenient option.
+- Open 'Session and Startup' in XFCE settings manager
+- Navigate to 'Application Autostart'</p>
+<h4 id="add-bspwm">Add bspwm<a class="headerlink" href="#add-bspwm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Name: bspwm</li>
+<li>Description: tiling-window-manager</li>
+<li>Command: bspwm</li>
+</ul>
+<h4 id="add-compton">Add compton<a class="headerlink" href="#add-compton" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Name: compton</li>
+<li>Description: composite-manager</li>
+<li>Command: compton --config /home/xfcebspwm/.config/compton/compton.conf -b</li>
+</ul>
+<h3 id="set-workspaces-to-10">Set Workspaces to 10<a class="headerlink" href="#set-workspaces-to-10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Open 'Workspaces'</li>
+<li>Increase number of workspaces to 10 (or the same value which you set in your bspwm config)</li>
+</ul>
+<p>The --config flag directs compton to start using the config file located in the user's home directory. You need to spell out the full user directory path. XFCE will not accept '<code>~</code>' as a user's home directory. The -b flag sets compton to run in the background.</p>
+<h3 id="dotfile-notes">Dotfile notes<a class="headerlink" href="#dotfile-notes" title="Permanent link">&para;</a></h3>
+<h4 id="bspwm-bspwmrc">bspwm | bspwmrc<a class="headerlink" href="#bspwm-bspwmrc" title="Permanent link">&para;</a></h4>
+<p>There are a lot of resources out there to understand how this file works. For me, the most helpful guidance was understanding how this file controls mouse actions. The lines below allow the mouse to manipulate windows when the 'alt' key is drpressed: floating windows can be resized with the 'left click' button; floating windows can be moved with the 'right click' button; tiling windows can be resized with the 'left click' button.
+- bspc config pointer_modifier mod1
+- bspc config pointer_action1 resize_side
+- bspc config pointer_action1 resize_corner
+- bspc config pointer_action3 move</p>
+<p>The other settings I have in this file set the number of workspaces, window padding, etc.
+Lastly, I also like having a dock. I use <a href="http://wiki.go-docky.com/index.php?title=Welcome_to_the_Docky_wiki">Docky</a>. In order to set Docky to appear above all other windows, I set this rule:</p>
+<p><code>bspc rule -a Docky layer=above manage=on border=off focus=off locked=on</code></p>
+<p>I also have Docky locked with focus turned off, this helps me to prevent accidentally closing Docky. </p>
+<h4 id="sxhkd-sxhkdrc">sxhkd | sxhkdrc<a class="headerlink" href="#sxhkd-sxhkdrc" title="Permanent link">&para;</a></h4>
+<p>sxhkd is great and it's also really easy to use. You assign a keybinding on one line and then in the line below, you indent, and then list the action you want to execute after pressing that keybinding. After reloading the config file (assigned to alt + Escape in my config file) the command will work or it won't. If it doesn't, something is wrong with the action you want to execute or there is a keybinding conflict.</p>
+<p>I like to leverage the function keys to execute the main features of bspwm and these are the settings I have defined in my sxhkdrc file:
+- F1: rotate windows
+- F2: circulate windows
+- F3: flip windows horizontal
+- F4: flip windows vertical
+- F5: alternate between the tiled and monocle layout
+- F6: balance windows
+- F7: increase window gap
+- F8: decrease window gap
+- F9: set the window state - floating
+- F10: set the window state - tiled
+- F11: set the window state - pseudo_tiled
+- F12: set the window state - fullscreen</p>
+<p>I've also set up some hotkeys to move through workspaces:
+- alt + left or right arrow</p>
+<p>And some hotkeys to cycle through windows on a workspace:
+- alt + up or down arrow</p>
+<p><strong>Note:</strong> I haven't even scratched the surface of bspwm by using the small number of commands listed above. bspwm is such an incredibly versatile WM I'm almost ashamed to only be using these features. Explore the man page, search google, and look at other dots to fully leverage bspwm. Do better than me. You're worth it.</p>
+<h4 id="compton-comptonconf">compton | compton.conf<a class="headerlink" href="#compton-comptonconf" title="Permanent link">&para;</a></h4>
+<p>I honestly don't know what 90% of the shit in this config file even does, the most important part of this file (for me) was to set inactive window transparency. I wanted to set all 'unfocused' windows to be transparent. To do this, I had to adjust the opacity settings:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#################################
+#
+# Opacity
+#
+#################################
+menu-opacity = 1;
+inactive-window-opacity = 1;
+inactive-opacity = 0.60;
+active-opacity = 1;
+frame-opacity = 1;
+</pre></div>
+</td></tr></table>
+
+<p>I also had to make sure these settings equaled 'false':  </p>
+<p><code>mark-wmwin-focused = false;</code><br />
+<code>mark-ovredir-focused = false;</code>  </p>
+<h4 id="rofi-config">rofi | config<a class="headerlink" href="#rofi-config" title="Permanent link">&para;</a></h4>
+<p>I really only use rofi to switch windows. 
+<strong>Note to anyone reading - please let me know if you have a cool way to switch windows other than rofi!!!</strong>
+I've enabled rofi to run by hitting 'alt-tab' [to switch windows] and 'alt-return' [to run applications] both defined in sxhkdrc. Rofi was also always transparent, even when focused. To fix this, I had to add the following settings to <strong>compton.conf</strong>:</p>
+<p><code># Specify a list of conditions of windows that should always be considered focused.</code></p>
+<p><code>focus-exclude = [&quot;name = 'rofi'&quot;];</code></p>
+<p>The <a href="https://davedavenport.github.io/rofi/p11-Generator.html">rofi website</a> has a really cool page to generate a custom theme. I like black and green. I selected these colors then copypasta into the rofi dot.</p>
+<h3 id="additional-notes">Additional notes<a class="headerlink" href="#additional-notes" title="Permanent link">&para;</a></h3>
+<p>bspwm uses roman numerals to name workspaces. I like this naming convention. To adjust this setting, open XFCE's settings manager, select workspaces, adjust the number of workspaces to match the number of workspaces you have defined in your bspwmrc file and rename them with roman numerals by simply clicking the 'workspace' name.</p>
+<p>I was a little confused about CaSe sensitivity respective to bspwmrc and sxhkdrc when launching applications. <a href="https://www.reddit.com/r/bspwm/comments/6sqw66/case_sensitivity_bspwmrc_and_sxhkdrc/">I asked about this on the bspwm subreddit</a> and received a very helpful response:</p>
+<p><code>From what i know, in the sxhkdrc file you use the same command that you use when starting the application. In my case for</code>
+<code>example, that could be firefox or firefox-esr. But, in the bspwmrc I use the the output of xprop second &quot;WM_CLASS(STRING)&quot;. In my</code>
+<code>case, that's Firefox-esr.</code></p>
+<p><code>Or, with libreoffice, I would put libreoffice or loffice in the sxhkd file but i have</code></p>
+<p><code>bspc rule -a libreoffice-startcenter desktop=^3</code></p>
+<p><code>in my bspwmrc since that's the output from xprop.</code></p>
+<p><code>If you don't know about xprop, type xprop in the terminal and select the a window. The last string after &quot;WM_CLASS(STRING)&quot; is</code>
+<code>what I put in bspwmrc. On firefox, xprop says this for eaxmple:</code></p>
+<p><code>WM_CLASS(STRING) = &quot;Navigator&quot;, &quot;Firefox-esr&quot;</code></p>
+<p><code>(It's the same when excluding shadows or changing opacity for specifik aplications with compton btw. You have to use the output</code>
+<code>from xprop. &quot;urxvt&quot; or &quot;firefox-esr&quot; won't work. It has to be Firefox-esr or URxvt.</code></p>
+<p><code>Hope that helps :)</code></p>
+<p><code>(Btw, if you want to start a GUI app from the terminal without terminal output and so on (and don't use rofi), put something like</code></p>
+<p><code>alias gimp='((gimp &gt; /dev/null 2&gt;&amp;1)&amp;)'</code></p>
+<p><code>in your .bash_aliases file.)</code></p>
+<p><strong>The bspwm setup in xfce is based on this Guide:</strong> <a href="https://github.com/bgdawes/bspwm-xfce-dotfiles/wiki">https://github.com/bgdawes/bspwm-xfce-dotfiles/wiki</a></p>
+<h2 id="post-config">Post Config<a class="headerlink" href="#post-config" title="Permanent link">&para;</a></h2>
+<h3 id="enable-network-manager">Enable network manager<a class="headerlink" href="#enable-network-manager" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo systemctl <span class="nb">enable</span> NetworkManager.service
+sudo systemctl start NetworkManager.service
+</pre></div>
+</td></tr></table>
+
+<h3 id="install-packages">Install packages<a class="headerlink" href="#install-packages" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo pacman -S firefox <span class="se">\</span>
+keepass <span class="se">\</span>
+keepass-plugin-keeagent <span class="se">\</span>
+inkscape <span class="se">\</span>
+gimp <span class="se">\</span>
+vlc <span class="se">\</span>
+qt4 <span class="se">\</span>
+thunderbird <span class="se">\</span>
+pinentry <span class="se">\</span>
+gpa <span class="se">\</span>
+nemo <span class="se">\</span>
+nemo-fileroller <span class="se">\</span>
+nemo-image-converter <span class="se">\</span>
+nemo-preview <span class="se">\</span>
+nemo-seahorse <span class="se">\</span>
+nemo-share <span class="se">\</span>
+quassel-client
+
+gpg --recv-keys --keyserver sks-keyservers.net 0xDB1187B9DD5F693B
+
+yay -S keepass-plugin-rpc <span class="se">\</span>
+keepass-plugin-haveibeenpwned <span class="se">\</span>
+keepass-plugin-http <span class="se">\</span>
+keepass2-plugin-tray-icon <span class="se">\</span>
+nextcloud-client <span class="se">\</span>
+franz-bin <span class="se">\</span>
+thunderbird-enigmail <span class="se">\</span>
+gtkhash-nemo <span class="se">\</span>
+nemo-compare <span class="se">\</span>
+spotify-stable
+</pre></div>
+</td></tr></table>
+
 <h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
 <ul>
 <li>Audio (Mic)<ul>
 <li>Get external Microphones working!</li>
 <li>Fix audio controls in xfce</li>
-</ul>
-</li>
-<li>Screensaver<ul>
-<li>Add screenlock command shortcut</li>
 </ul>
 </li>
 </ul>
