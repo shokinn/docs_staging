@@ -1516,11 +1516,15 @@
 </td></tr></table>
 
 <p>Afterwards you establish the connection change back to TTY1 with <code>ALT</code>+<code>F1</code>.</p>
+<p>Run dhclient to reciev an ip via dhcp:<br />
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dhclient wlp2s0
+</pre></div>
+</td></tr></table></p>
 <h3 id="update-the-system-clock">Update the system clock<a class="headerlink" href="#update-the-system-clock" title="Permanent link">&para;</a></h3>
 <p>Use <a href="http://jlk.fjfi.cvut.cz/arch/manpages/man/timedatectl.1">timedatectl(1)</a> to ensure the system clock is accurate:<br />
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># timedatectl set-ntp true</span>
-<span class="c1"># systemctl start sysdemd-timesyncd</span>
+<span class="c1"># systemctl start systemd-timesyncd</span>
 </pre></div>
 </td></tr></table></p>
 <p>To check the service status, use timedatectl status.</p>
@@ -1552,7 +1556,7 @@
 |                |                |                | /dev/mapper/osvg-swap | /dev/mapper/osvg-tmp  | /dev/mapper/osvg-root | /dev/mapper/osvg-home |
 |                |                |      EF02      |_ _ _ _ _ _ _ _ _ _ _ _|_ _ _ _ _ _ _ _ _ _ _ _|_ _ _ _ _ _ _ _ _ _ _ _|_ _ _ _ _ _ _ _ _ _ _ _|
 |      EF00      |      8300      |      8 MiB     |                                                                                               |
-|     500 MiB    |     500 MiB    |      BIOS      |                                             8E00                                              |
+|     550 MiB    |     500 MiB    |      BIOS      |                                             8E00                                              |
 |  EFI partition | boot partition | Boot partition |                                           100%FREE                                            |
 | /dev/nvme0n1p1 | /dev/nvme0n1p2 | /dev/nvme0n1p3 |                                        /dev/nvme0n1p4                                         |
 +----------------+----------------+----------------+-----------------------------------------------------------------------------------------------+
