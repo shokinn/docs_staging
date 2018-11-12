@@ -40,7 +40,7 @@
     
     
       
-        <title>Arch Linux Dell XPS 15 (9560) - bspwm in xfce (Desktop) - Philip's docs</title>
+        <title>Arch Linux bspwm under xfce4 - Philip's docs</title>
       
     
     
@@ -128,7 +128,7 @@
                 Philip's docs
               </span>
               <span class="md-header-nav__topic">
-                Arch Linux Dell XPS 15 (9560) - bspwm in xfce (Desktop)
+                Arch Linux bspwm under xfce4
               </span>
             
           
@@ -255,10 +255,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Hardware
@@ -274,10 +276,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       Dell XPS 15 9560
@@ -295,9 +299,216 @@
 
 
   <li class="md-nav__item">
-    <a href="../dell_xps_15_9560_arch_linux/" title="Arch Linux" class="md-nav__link">
-      Arch Linux
+    <a href="../dell_xps_15_9560_arch_linux_base/" title="Arch Linux Base" class="md-nav__link">
+      Arch Linux Base
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Arch Linux bspwm under xfce4
+      </label>
+    
+    <a href="./" title="Arch Linux bspwm under xfce4" class="md-nav__link md-nav__link--active">
+      Arch Linux bspwm under xfce4
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-desktop" title="Install Desktop" class="md-nav__link">
+    Install Desktop
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-xfce4" title="Install xfce4" class="md-nav__link">
+    Install xfce4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-xscreensaver" title="Install xscreensaver" class="md-nav__link">
+    Install xscreensaver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-login-manager" title="Install login manager" class="md-nav__link">
+    Install login manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-bspwm-sxhkd-compton-rofi-polybar" title="Install bspwm, sxhkd, compton, rofi, polybar" class="md-nav__link">
+    Install bspwm, sxhkd, compton, rofi, polybar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivate-xfwm4" title="Deactivate xfwm4" class="md-nav__link">
+    Deactivate xfwm4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-xfce-hotkeys" title="Remove XFCE hotkeys" class="md-nav__link">
+    Remove XFCE hotkeys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autostart-required-applications-in-xfce" title="Autostart required applications in XFCE" class="md-nav__link">
+    Autostart required applications in XFCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-bspwm" title="Add bspwm" class="md-nav__link">
+    Add bspwm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-compton" title="Add compton" class="md-nav__link">
+    Add compton
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-workspaces-to-10" title="Set Workspaces to 10" class="md-nav__link">
+    Set Workspaces to 10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfile-notes" title="Dotfile notes" class="md-nav__link">
+    Dotfile notes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bspwm-bspwmrc" title="bspwm | bspwmrc" class="md-nav__link">
+    bspwm | bspwmrc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sxhkd-sxhkdrc" title="sxhkd | sxhkdrc" class="md-nav__link">
+    sxhkd | sxhkdrc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compton-comptonconf" title="compton | compton.conf" class="md-nav__link">
+    compton | compton.conf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rofi-config" title="rofi | config" class="md-nav__link">
+    rofi | config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" title="Additional notes" class="md-nav__link">
+    Additional notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-config" title="Post Config" class="md-nav__link">
+    Post Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-network-manager" title="Enable network manager" class="md-nav__link">
+    Enable network manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-packages" title="Install packages" class="md-nav__link">
+    Install packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -458,6 +669,18 @@
   <li class="md-nav__item">
     <a href="../../../kb/mkdocs/" title="MkDocs testing environment" class="md-nav__link">
       MkDocs testing environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../kb/bmon/" title="Bmon network monitor" class="md-nav__link">
+      Bmon network monitor
     </a>
   </li>
 
@@ -1218,6 +1441,41 @@ spotify-stable
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../dell_xps_15_9560_arch_linux_base/" title="Arch Linux Base" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Arch Linux Base
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../software/desktop/playonlinux/" title="PlayOnLinux" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                PlayOnLinux
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

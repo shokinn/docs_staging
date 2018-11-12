@@ -40,7 +40,7 @@
     
     
       
-        <title>Arch Linux Dell XPS 15 (9560) - Base Arch - Philip's docs</title>
+        <title>Arch Linux Base - Philip's docs</title>
       
     
     
@@ -128,7 +128,7 @@
                 Philip's docs
               </span>
               <span class="md-header-nav__topic">
-                Arch Linux Dell XPS 15 (9560) - Base Arch
+                Arch Linux Base
               </span>
             
           
@@ -255,10 +255,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Hardware
@@ -274,10 +276,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       Dell XPS 15 9560
@@ -293,10 +297,495 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Arch Linux Base
+      </label>
+    
+    <a href="./" title="Arch Linux Base" class="md-nav__link md-nav__link--active">
+      Arch Linux Base
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-installation" title="Pre-installation" class="md-nav__link">
+    Pre-installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uefi" title="UEFI" class="md-nav__link">
+    UEFI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-keyboard-layout" title="Change Keyboard layout" class="md-nav__link">
+    Change Keyboard layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-a-wireless-network-during-installation-temporary" title="Connect to a wireless network during installation (temporary)" class="md-nav__link">
+    Connect to a wireless network during installation (temporary)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-the-system-clock" title="Update the system clock" class="md-nav__link">
+    Update the system clock
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-disks" title="Preparing Disks" class="md-nav__link">
+    Preparing Disks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wipe-data-on-all-partitions" title="Wipe Data on all partitions" class="md-nav__link">
+    Wipe Data on all partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-logical-volumes" title="Preparing the logical volumes" class="md-nav__link">
+    Preparing the logical volumes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-luks-for-our-partitions" title="Setup LUKS for our partitions" class="md-nav__link">
+    Setup LUKS for our partitions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-arch" title="Install Arch" class="md-nav__link">
+    Install Arch
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sort-mirrors-by-speed" title="Sort mirrors by speed" class="md-nav__link">
+    Sort mirrors by speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-base-packages" title="Install the base packages" class="md-nav__link">
+    Install the base packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-system" title="Configure the system" class="md-nav__link">
+    Configure the system
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gen-fstab" title="Gen fstab" class="md-nav__link">
+    Gen fstab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-mntetccrypttab" title="Modify /mnt/etc/crypttab" class="md-nav__link">
+    Modify /mnt/etc/crypttab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chroot" title="Chroot" class="md-nav__link">
+    Chroot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncomment-pacman-multilib-option" title="Uncomment pacman multilib option" class="md-nav__link">
+    Uncomment pacman multilib option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-packages" title="Install Packages" class="md-nav__link">
+    Install Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-vim-dark-colors-stuff" title="Fix vim dark colors stuff" class="md-nav__link">
+    Fix vim dark colors stuff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-vim-to-default-editor" title="set vim to default editor" class="md-nav__link">
+    set vim to default editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-my-user" title="Create my User" class="md-nav__link">
+    Create my User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-root-login" title="Disable root login" class="md-nav__link">
+    Disable root login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-group-wheel-so-user-sudo" title="Allow group wheel so user sudo" class="md-nav__link">
+    Allow group wheel so user sudo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keep-http_proxy-variables" title="Keep http_proxy variables" class="md-nav__link">
+    Keep http_proxy variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-yay" title="Install yay" class="md-nav__link">
+    Install yay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-zone" title="Time zone" class="md-nav__link">
+    Time zone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locale" title="Locale" class="md-nav__link">
+    Locale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-console" title="Setup console" class="md-nav__link">
+    Setup console
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-console-powerline-font" title="Install console powerline font" class="md-nav__link">
+    Install console powerline font
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-keymap" title="Set keymap" class="md-nav__link">
+    Set keymap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostname" title="Hostname" class="md-nav__link">
+    Hostname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-mkinitpico" title="Edit mkinitpico" class="md-nav__link">
+    Edit mkinitpico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-initramfs" title="Generate initramfs" class="md-nav__link">
+    Generate initramfs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-grub" title="Install GRUB" class="md-nav__link">
+    Install GRUB
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-boot-loader" title="Configuring the boot loader" class="md-nav__link">
+    Configuring the boot loader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-grub-config" title="Generate GRUB config" class="md-nav__link">
+    Generate GRUB config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reboot-into-the-installed-system" title="Reboot into the installed system" class="md-nav__link">
+    Reboot into the installed system
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify-uefi" title="Modify UEFI" class="md-nav__link">
+    Modify UEFI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-installation-configuration" title="Post installation configuration" class="md-nav__link">
+    Post installation configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-useful-services" title="Install useful services" class="md-nav__link">
+    Install useful services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-graphics-card-and-x-working" title="Get graphics card and X working" class="md-nav__link">
+    Get graphics card and X working
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-graphic-card-tools" title="Install graphic card tools" class="md-nav__link">
+    Install graphic card tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics-card-driversutils" title="Graphics card drivers/utils" class="md-nav__link">
+    Graphics card drivers/utils
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-my-dot-files" title="Get my dot files" class="md-nav__link">
+    Get my dot files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powertop" title="Powertop" class="md-nav__link">
+    Powertop
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimize-power-comsumption" title="Optimize power comsumption" class="md-nav__link">
+    Optimize power comsumption
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-powertop-optimazations-permanent" title="Make powertop optimazations permanent" class="md-nav__link">
+    Make powertop optimazations permanent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-packages_1" title="Install packages" class="md-nav__link">
+    Install packages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-audio-packages" title="Install audio packages" class="md-nav__link">
+    Install audio packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-various-packages" title="Install various packages" class="md-nav__link">
+    Install various packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-ssh-agent-serive" title="Enable SSH-Agent Serive" class="md-nav__link">
+    Enable SSH-Agent Serive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../dell_xps_15_9560_arch_linux/" title="Arch Linux" class="md-nav__link">
-      Arch Linux
+    <a href="../dell_xps_15_9560_arch_linux_bspwm_in_xfce/" title="Arch Linux bspwm under xfce4" class="md-nav__link">
+      Arch Linux bspwm under xfce4
     </a>
   </li>
 
@@ -458,6 +947,18 @@
   <li class="md-nav__item">
     <a href="../../../kb/mkdocs/" title="MkDocs testing environment" class="md-nav__link">
       MkDocs testing environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../kb/bmon/" title="Bmon network monitor" class="md-nav__link">
+      Bmon network monitor
     </a>
   </li>
 
@@ -1616,6 +2117,41 @@ systemctl --user start ssh-agent.service
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../dell_xps_15_9560_arch_linux_bspwm_in_xfce/" title="Arch Linux bspwm under xfce4" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Arch Linux bspwm under xfce4
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
