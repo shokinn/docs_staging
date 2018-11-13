@@ -1015,14 +1015,18 @@ startx
 50
 51
 52
-53</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdir ~/Videos <span class="o">&amp;&amp;</span> <span class="se">\</span>
-sudo mkdir ~/Videos/ATV4 <span class="o">&amp;&amp;</span> <span class="se">\</span>
-sudo ln -s /home/<span class="nv">$USER</span>/Videos/ATV4 /opt/ <span class="o">&amp;&amp;</span> <span class="se">\</span>
-sudo touch ~/Videos/ATV4/download.sh <span class="o">&amp;&amp;</span> <span class="se">\</span>
-cat <span class="s">&lt;&lt; EOF | sudo tee ~/Videos/ATV4/download.sh &amp;&amp; \</span>
-<span class="s">sudo chmod +x ~/Videos/ATV4/download.sh &amp;&amp; \</span>
-<span class="s">cd ~/Videos/ATV4 &amp;&amp; \</span>
-<span class="s">sudo ./download.sh</span>
+53
+54
+55</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo mkdir -p /home/sddm/ATV4 <span class="o">&amp;&amp;</span> <span class="se">\</span>
+sudo ln -s /home/sddm/ATV4 /opt/ <span class="o">&amp;&amp;</span> <span class="se">\</span>
+sudo touch /home/sddm/ATV4/download.sh <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cat <span class="s">&lt;&lt; EOF | sudo tee /home/sddm/ATV4/download.sh &amp;&amp; \</span>
+<span class="s">sudo chmod +x /home/sddm/ATV4/download.sh &amp;&amp; \</span>
+<span class="s">cd /home/sddm/ATV4 &amp;&amp; \</span>
+<span class="s">sudo ./download.sh &amp;&amp; \</span>
+<span class="s">cd ~ &amp;&amp; \</span>
+<span class="s">sudo chmod 700 /home/sddm &amp;&amp; \</span>
+<span class="s">sudo chown -R sddm:sddm /home/sddm</span>
 <span class="s">#!/bin/sh</span>
 <span class="s"># run this from /opt/ATV4 which you created and assigned 755 premissions manually</span>
 
