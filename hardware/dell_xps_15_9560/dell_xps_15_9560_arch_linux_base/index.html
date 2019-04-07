@@ -1955,27 +1955,17 @@ GRUB_CMDLINE_LINUX=&quot;cryptdevice=/dev/mapper/osvg-root:root root=/dev/mapper
 </td></tr></table></p>
 <details class="info"><summary>Command explanation</summary><ul>
 <li><code>pcie_aspm=off</code> Forcibly enable or disable PCIe Active State Power Management.</li>
-</ul>
-</details>
-<ul>
 <li><code>acpi_rev_override=1</code> is needed to get the NVIDIA graphics card working resp. to disable it.</li>
 <li><code>modprobe.blacklist=nouveau</code> blacklists nouveau driver (open source NVIDIA driver).</li>
 <li><code>nouveau.modeset=0</code> disables modeset for nouveau (just in case).</li>
 <li><code>i915.modeset=1</code> enables modeset for the i915 module (integrated intel graphics).</li>
 <li><code>enable_fbc=1</code> enables frame buffer compression.</li>
 <li><code>enable_psr=1</code> enables panel self refresh.</li>
-<li>
-<p><code>disable_power_well=0</code> Try to disable possible power wells. </p>
-<ul>
-<li>
-<p>The kernel option <code>pci=nommconf</code> disables Memory-Mapped PCI Configuration Space, which is available in Linux since kernel 2.6. Very roughly, all PCI devices have an area that describe this device (which you see with lspci -vv), and the originally method to access this area involves going through I/O ports, while PCIe allows this space to be mapped to memory for simpler access.</p>
-</li>
-<li>
-<p><code>cryptdevice=/dev/mapper/osvg-root:root root=/dev/mapper/root</code> configures the crypt device.</p>
-</li>
+<li><code>disable_power_well=0</code> Try to disable possible power wells. </li>
+<li>The kernel option <code>pci=nommconf</code> disables Memory-Mapped PCI Configuration Space, which is available in Linux since kernel 2.6. Very roughly, all PCI devices have an area that describe this device (which you see with lspci -vv), and the originally method to access this area involves going through I/O ports, while PCIe allows this space to be mapped to memory for simpler access (currently unused, stays in documentation for documentation purposes).</li>
+<li><code>cryptdevice=/dev/mapper/osvg-root:root root=/dev/mapper/root</code> configures the crypt device.</li>
 </ul>
-</li>
-</ul>
+</details>
 <h5 id="generate-grub-config">Generate GRUB config<a class="headerlink" href="#generate-grub-config" title="Permanent link">&para;</a></h5>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grub-mkconfig -o /boot/grub/grub.cfg
 </pre></div>
@@ -2181,7 +2171,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 <span class="s">EOF</span>
 </pre></div>
 </td></tr></table></p>
-<div class="admonition info">
+<div class="admonition warning">
 <p class="admonition-title">Don't start/enable powertop for now</p>
 <p>Powertop is breaking bumblebee from Kernel 4.16.13. -- And tlp should also do a good job for saving power.
 See here for more details:<br />
